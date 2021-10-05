@@ -1,10 +1,32 @@
 import React from 'react';
 import './App.css';
+import {First} from './First'
+
+
 
 export default function App() {
+ 
+ const someList = [
+    { id: 1, text: 'Animals' },
+    { id: 2, text: 'Anime' },
+    { id: 3, text: 'Anti-Malware' },
+    { id: 4, text: 'Art Design' },
+    { id: 5, text: 'Books' },
+    { id: 6, text: 'Business' },
+    { id: 7, text: 'Calendar' },
+    { id: 8, text: 'Cloud Storage' },
+    { id: 9, text: 'File Sharing' },
+    { id: 10, text: 'Animals' },
+    { id: 11, text: 'Continuous Integration' },
+    { id: 12, text: 'Cryptocurrency' }
+  ];
   return (
-    <div>
+    
+  <div>
       Some data:
+      
+        <First list={someList.map(el => el.text.toLowerCase())}/>
+    
     </div>
   );
 }
